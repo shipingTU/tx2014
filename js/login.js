@@ -1,4 +1,3 @@
-
 var existCompte = false;
 var defi=0;
 var ss = 2;
@@ -91,7 +90,7 @@ function checkForm(){
 			return false;
 		}else{
 			window.location.replace('../menuPrincipal.php');
-			return false;
+			return true;
 		}
         
     }

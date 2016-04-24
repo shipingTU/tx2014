@@ -5,8 +5,8 @@ $player = $_SESSION['joueur']['id_Joueur'];;
 $i = 0;
 
 //recuperer les joueurs qui peuvent etre defiés, de plus, il ont répondu des questionnaires
-$requete = "SELECT id_Joueur,nickname FROM joueur WHERE defi_joueur=1 AND id_Joueur != '$player' 
-			AND id_Joueur IN (SELECT DISTINCT JjQ_id_Joueur FROM joueur_joue_questionnaire jjQ INNER JOIN questionnaire q 
+$requete = "SELECT id_Joueur,nickname FROM Joueur WHERE defi_joueur=1 AND id_Joueur != '$player' 
+			AND id_Joueur IN (SELECT DISTINCT JjQ_id_Joueur FROM Joueur_joue_Questionnaire jjQ INNER JOIN Questionnaire q 
 			ON jjQ.JjQ_id_Questionnaire = q.id_Questionnaire WHERE q.defi_Questionnaire=1 AND q.etat_Questionnaire=1)";
 $result = $mysqlConn->query($requete);
 while($row = $result->fetch_assoc()) {
@@ -17,6 +17,7 @@ while($row = $result->fetch_assoc()) {
 
 $mysqlConn->close();
 ?>
+
 <html lang="fr">
     <head>
         <meta charset="utf-8">

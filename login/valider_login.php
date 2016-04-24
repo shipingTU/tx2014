@@ -12,11 +12,10 @@ $defi_inscrit = $infos[2];
 $exist = false;
 $message = "";
 
-$requete = "select * from joueur where login_joueur = '$login_inscrit' and MDP_joueur = '$password_inscrit' and etat_joueur = '1'";
+$requete = "select * from Joueur where login_joueur = '$login_inscrit' and MDP_joueur = '$password_inscrit'";
 
 $result = $mysqlConn->query($requete);
 if ($result->num_rows > 0) {
-	
 	   session_start();
 	   while($row = $result->fetch_assoc()) {
 			$_SESSION['joueur']=array('id_Joueur'=>$row["id_Joueur"], 
@@ -25,7 +24,7 @@ if ($result->num_rows > 0) {
 									);
        }	
 	   
-	   $message = "Accès avec succès"."<br>";
+	   $message = "Accès avec succès";
 	   $exist=true;
 
 } else {
@@ -36,12 +35,12 @@ if ($result->num_rows > 0) {
 
 if($exist === true){
 
-$requete = "update joueur set defi_joueur = '$defi_inscrit' WHERE login_joueur = '$login_inscrit' and MDP_joueur = '$password_inscrit'";
+	$requete = "update Joueur set defi_joueur = '$defi_inscrit' WHERE login_joueur = '$login_inscrit'";
 
-if ($mysqlConn->query($requete) === TRUE) {
-	$_SESSION['defi']=$defi_inscrit;
-}
-$mysqlConn->close();
+	if ($mysqlConn->query($requete) === TRUE) {
+		$_SESSION['defi']=$defi_inscrit;
+	}
+	$mysqlConn->close();
 }
 echo $message;
 ?>

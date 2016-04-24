@@ -47,8 +47,8 @@
                   </div>
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                      <a href="../inscription/inscription.php">S'inscrire</a>
-                      <span style="margin-left:30px;"><input type="submit" value="Se connecter" class="btn btn-primary"></span>
+                      <input type="submit" value="Se connecter" class="btn btn-primary"></span>
+                      <span style="margin-left:30px;"><a href="../inscription/inscription.php" class="btn btn-primary">S'inscrire</a>
                     </div>
                   </div>
 				  <span id="mes_login" class="reussie"></span><span style="margin-left:13px;" id="timer" class="reussie"></span>
