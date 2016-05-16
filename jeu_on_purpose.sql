@@ -140,22 +140,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `jeu_on_purpose`.`Resultat`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `jeu_on_purpose`.`Resultat` (
-  `id_Resultat` INT NOT NULL,
-  `score1` INT NULL,
-  `score2` INT NULL,
-  `score3` INT NULL,
-  `score4` INT NULL,
-  `score5` INT NULL,
-  `score_moy` INT NULL,
-  UNIQUE INDEX `id_Resultat_UNIQUE` (`id_Resultat` ASC),
-  PRIMARY KEY (`id_Resultat`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `jeu_on_purpose`.`JjQ_has_reponse`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `jeu_on_purpose`.`JjQ_has_reponse` (

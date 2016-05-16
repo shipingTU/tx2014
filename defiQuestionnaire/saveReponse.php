@@ -71,19 +71,19 @@ $mysqlConn->query($requete5);
 
 
 //lier reponse id avec le questionnaire
-$requete1 = "INSERT INTO Jjq_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
+$requete1 = "INSERT INTO JjQ_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
 $mysqlConn->query($requete1);
 $debut = $debut +1;
-$requete2 = "INSERT INTO Jjq_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
+$requete2 = "INSERT INTO JjQ_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
 $mysqlConn->query($requete2);
 $debut = $debut +1;
-$requete3 = "INSERT INTO Jjq_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
+$requete3 = "INSERT INTO JjQ_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
 $mysqlConn->query($requete3);
 $debut = $debut +1;
-$requete4 = "INSERT INTO Jjq_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
+$requete4 = "INSERT INTO JjQ_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
 $mysqlConn->query($requete4);
 $debut = $debut +1;
-$requete5 = "INSERT INTO Jjq_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
+$requete5 = "INSERT INTO JjQ_has_reponse(JjQ_has_reponse_id_JjQ,JjQ_has_reponse_id_Reponse) VALUES ('$idResultat','$debut')";
 $mysqlConn->query($requete5);
 
 $mysqlConn->close();

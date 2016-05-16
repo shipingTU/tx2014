@@ -188,7 +188,7 @@ $(document).ready(function(){
 		Sp = 1 - ((reponseL[counter-1][0] - reponseL[counter-1][1])*(reponseIMax[counter-1][0]- reponseIMin[counter-1][0])
 			   + (reponseL[counter-1][1] - reponseL[counter-1][2])*(reponseIMax[counter-1][1]- reponseIMin[counter-1][1])
 			   + reponseL[counter-1][2] * (reponseIMax[counter-1][2]- reponseIMin[counter-1][2]))
-			   / (100*(supportMax - supportMin)) 
+			   / (100 *(supportMax - supportMin)) 
 		score[counter-1] = parseInt(parseFloat((Sa * Sp).toFixed(2))*100);
 		
 		$.ajax({
